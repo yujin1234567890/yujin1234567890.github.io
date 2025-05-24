@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin:0;
+  padding:0;
+}
+html {
+  scroll-behavior: smooth;/* 스크롤 이동을 부드럽게*/
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background: #faf7fc;
+  color:#222;
+}
+.sidebar {
+  position: fixed;
+  left:0;
+  top:0;
+  width:256px;
+  height: 100vh;
+  background:linear-gradient(10deg,#b9def6,#1594e3);
+  display: flex;
+  flex-direction: column; /*플렉스 컨테이너(부모 요소) 안의 자식 
+  요소들을 세로(열) 방향으로 정렬*/
+  align-items: center;/*플렉스 컨테이너의 교차축방향(기본적으로 
+  세로 방향)에서 자식 요소들을 가운데 정렬*/
+  padding-top:200px;
+}
+.sidebar nav ul {
+  list-style:none;
+  padding: 0;
+  margin:0;
+}
+.sidebar nav ul li {
+  margin: 18px 0;
+}
+.sidebar nav ul li a {
+  color:#fff;
+  text-decoration:none;
+  font-size: 24px;
+  font-weight:bold;
+  transition: color 0.2s;
+}
+.sidebar nav ul li a:hover {
+  color:#f6f04b;
+}
+.sidebar nav:has(a:hover) a:not(:hover){
+  opacity: 0.6;
+}
+.button {
+  position: fixed;
+  font-size:15px;
+  background: #4bafed;
+  color:#fff;
+  font-weight:bold;
+  top:900px;
+  right:100px;
+  z-index:5; /*숫자가 높을수록 앞에 표시*/
+  border-radius:15px;
+  width:100px;
+  height:30px;
+  text-align:center;
+  padding-top:5px;
+}
+.button a {
+  color:#fff01b;
+  text-decoration:none;
+}
+/*main*/
+.main {
+  position:relative;
+  margin-left:300px;
+  max-width: 100%;
+  padding: 30px 40px;
+}
+#main_profile {
+  height:100vh;
+  width:100%;
+}
+#main_profile .profile_img {
+ width: 240px;
+ height:240px;
+ border-radius:50%;
+ object-fit: fill;
+ margin-top:150px;
+ border:2px solid #fff;
+}
+#main_profile h1 {
+  color:#555;
+  margin-bottom: 4px;
+  font-size:105px;
+}
+#main_profile h1 span {
+  color:#35aff5;
+}
+#main_profile p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color:#333;
+}
+#main_profile .info {
+  color:#9c9595;
+  font-weight:bold;
+  padding-top:20px;
+}
+#main_profile .info span {
+  color:#35aff5;
+  font-size: 1.2em;
+}
+/*main_profile .social*/
+#main_profile .social a {
+  margin-right:30px;
+  color:#484848;
+  text-decoration:none;
+  font-size: 40px;
+}
+/*#main_profile .aboutme*/
+#main_profile .aboutme {
+  display: block;
+  color:#1594e3;
+  padding-top: 20px;
+}
+#main_profile .aboutme h2 {
+  font-size:30px;
+  margin-top: 20px;
+}
+#main_profile .aboutme ul {
+  margin-top: 10px;
+}
+#main_profile .aboutme ul li {
+  font-size:20px;
+  list-style:none;
+  color:#333;
+}
+/*education*/
+#education {
+  width:100%;
+  height: 100vh;
+  border-bottom: 1px soild #d7dff3;
+  padding-top: 200px;
+  color:#9c9595;
+}
+#education h2 {
+  color:#444;
+  margin-bottom: 109px;
+  font-size: 60px;
+}
+#education ul {
+  margin-top:30px;
+}
+#education ul li {
+  font-size:30px;
+  list-style: none;
+  margin-bottom:100px;
+}
+#education ul li p {
+ font-size: 24px;
+}
+#education h3 {
+  color:#444;
+}
+#education ul li .small {
+  margin-top:20px;
+  font-size:16px;
+}
+#education ul li .date {
+  width:200px;
+  padding-left: 1000px;
+  color:#1594e3;
+  font-size:15px;
+  position:absolute;
+  text-align: right;
+}
+/*experience*/
+#experience {
+  width:100%;
+  height:100vh;
+  border-bottom:1px solid #d7dff3;
+  padding-top:200px;
+  color:#807d7d;
+}
+#experience h2 {
+  color:#333;
+  margin-bottom:10px;
+  font-size:60px;
+}
+#experience h3 {
+  font-size: 32px;
+  color:#1594e3;
+}
+#experience h3 span {
+  color:#9c9595;
+  font-size:28px;
+}
+#experience p {
+  color:#f3920a;
+  font-weight:bold;
+  font-size:26px;
+  padding-top: 50px;
+}
+#experience .date {
+  font:18px/1 normal;
+  color:#1594e3;
+  padding-top: 10px;
+}
+#experience .work {
+  color:#484848;
+  font:32px bold; 
+  padding:10px 0px;
+}
+#experience ul {
+  list-style-type: square;
+  color:#444;
+  font-size:20px;
+}
+#experience ul li:nth-child(2){
+ list-style-type: none;
+ text-indent: 3px; /*들여쓰기*/
+}
+#experience ul li:nth-child(3){
+ list-style-type: none;
+ text-indent: 3px; /*들여쓰기*/
+}
+#experience ul li:nth-child(5) {
+  list-style-type: none;
+  text-indent: 3px;
+}
+#experience ul li:nth-child(7) {
+  list-style-type: none;
+  text-indent: 3px;
+}
+/*certificates*/
+#certificates {
+  width:100%;
+  height:100vh;
+  border-bottom: 1px solid  #d7dff3;
+  color:#9c9595;
+}
+#certificates h2 {
+  color:#444;
+  margin-bottom: 10px;
+  font-size:60px;
+  padding-top: 150px;
+}
+#certificates h3 {
+  font-size: 32px;
+  color:#444;
+  padding-top: 50px;
+}
+#certificates .certi {
+  padding-top: 50px;
+}
+#certificates ul li {
+  padding-top: 50px;
+  list-style:none;
+}
+#certificates p {
+  width:300px;
+  color:#1594e3;
+  padding-left:1000px;
+  position:absolute;
+  text-align: right;
+}
+/*skills*/
+#skills {
+  width: 100%;
+  height:100vh;
+  border-bottom: 1px solid  #d7dff3;
+  padding-top:200px;
+  color:#807d7d;
+}
+#skills h2 {
+  color:#444;
+  margin-bottom: 30px;
+  font-size:60px;
+}
+#skills .skills-list span {
+ display:inline-block;
+ background:#fce9db;
+ color:#e55705;
+ border-radius: 4px;
+ padding:20px 20px;
+ margin:4px 15px 4px 0px;
+ font: 20px bold;
+}
+#skills ul {
+  list-style-type: none;
+  padding-top:20px;
+  font-size: 20px;
+}
+#skills ul li {
+  padding:5px 0;
+}
+#skills ul li:nth-child(3) {
+  text-indent: 20px;
+}
+#skills ul li:nth-child(n+5):nth-child(-n+7){
+  text-indent:20px;
+}
